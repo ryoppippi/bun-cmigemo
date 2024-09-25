@@ -2,7 +2,12 @@
   "name": "bun-cmigemo",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "dict": "bun ./scripts/fech-dict.ts",
+    "prepare": "nr dict"
+  },
   "devDependencies": {
+    "@antfu/ni": "^0.23.0",
     "@types/bun": "latest"
   },
   "peerDependencies": {
