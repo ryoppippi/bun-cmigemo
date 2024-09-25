@@ -3,6 +3,7 @@
 	"type": "module",
 	"module": "index.ts",
 	"scripts": {
+		"main": "bun run index.ts",
 		"lint": "eslint --cache .",
 		"format": "nr lint --fix",
 		"prepare": "nlx bunpare && nr dict && nr cmigemo:fetch && nr cmigemo:build",
