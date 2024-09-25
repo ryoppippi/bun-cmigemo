@@ -5,8 +5,9 @@
 	"scripts": {
 		"lint": "eslint --cache .",
 		"format": "nr lint --fix",
+		"prepare": "nr dict && nr cmigemo",
 		"dict": "bun ./scripts/fech-dict.ts",
-		"prepare": "nr dict"
+		"cmigemo": "nlx giget --forceClean gh:koron/cmigemo#master"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
