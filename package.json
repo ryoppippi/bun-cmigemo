@@ -5,7 +5,7 @@
 	"scripts": {
 		"lint": "eslint --cache .",
 		"format": "nr lint --fix",
-		"prepare": "nr dict && nr cmigemo",
+		"prepare": "nlx bunpare && nr dict && nr cmigemo",
 		"dict": "bun ./scripts/fech-dict.ts",
 		"cmigemo": "nlx giget --forceClean gh:koron/cmigemo#master"
 	},
