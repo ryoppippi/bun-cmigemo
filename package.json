@@ -22,5 +22,8 @@
 		"consola": "^3.2.3",
 		"eslint": "^9.11.1",
 		"eslint-plugin-format": "^0.1.2"
+	},
+	"dependencies": {
+		"uint8array-extras": "^1.4.0"
 	}
 }
