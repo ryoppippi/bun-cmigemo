@@ -1,15 +1,18 @@
 #include <stdio.h>
 #include "migemo.h"
 
-int migemoRun() {
+migemo* migemoOpen(char* dict_path) {
   migemo *m;
-  /* C/Migemoの準備: 辞書読込にはエラー検出のためloadを推奨 */
   m = migemo_open(NULL);
-  migemo_load(m, MIGEMO_DICTID_MIGEMO, "./dict/migemo-dict");
+  migemo_load(m, MIGEMO_DICTID_MIGEMO, dict_path);
+  return m;
+}
+int migemoRun(char* dict_path, char *query) {
+  migemo *m = migemoOpen(dict_path);
   /* 必要な回数だけqueryを行なう */
   {
     unsigned char* p;
-    p = migemo_query(m, "nezu");
+    p = migemo_query(m, query);
     printf("C/Migemo: %s\n", p);
     migemo_release(m, p); /* queryの結果は必ずreleaseする */
   }
@@ -17,3 +20,4 @@ int migemoRun() {
   migemo_close(m);
   return 0;
 }
+
