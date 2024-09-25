@@ -1,16 +1,21 @@
 {
-  "name": "bun-cmigemo",
-  "module": "index.ts",
-  "type": "module",
-  "scripts": {
-    "dict": "bun ./scripts/fech-dict.ts",
-    "prepare": "nr dict"
-  },
-  "devDependencies": {
-    "@antfu/ni": "^0.23.0",
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+	"name": "bun-cmigemo",
+	"type": "module",
+	"module": "index.ts",
+	"scripts": {
+		"lint": "eslint --cache .",
+		"format": "nr lint --fix",
+		"dict": "bun ./scripts/fech-dict.ts",
+		"prepare": "nr dict"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"devDependencies": {
+		"@antfu/ni": "^0.23.0",
+		"@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",
+		"@types/bun": "latest",
+		"eslint": "^9.11.1",
+		"eslint-plugin-format": "^0.1.2"
+	}
 }
