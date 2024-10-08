@@ -6,9 +6,7 @@
 		"main": "bun run index.ts",
 		"lint": "eslint --cache .",
 		"format": "nr lint --fix",
-		"prepare": "nlx bunpare && nr dict && nr cmigemo:fetch && nr cmigemo:build",
-		"dict": "nlx giget --forceClean gh:oguna/migemo-compact-dict-latest#master && nr bunsh dict:mv",
-		"dict:mv": "mv oguna-migemo-compact-dict-latest dict",
+		"prepare": "nlx bunpare && nr cmigemo:fetch && nr cmigemo:build",
 		"cmigemo:fetch": "nlx giget --forceClean gh:koron/cmigemo#master",
 		"cmigemo:build": "bun run ./scripts/build-cmigemo.ts",
 		"bunsh": "bun run --shell bun"
