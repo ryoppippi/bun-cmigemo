@@ -6,7 +6,7 @@ import { html } from 'hono/html';
 import { Migemo } from '../lib';
 
 const app = new Hono();
-using migemo = new Migemo();
+using migemo = new Migemo('../utf-8/migemo-dict');
 
 async function App() {
 	return (
