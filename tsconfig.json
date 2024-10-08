@@ -1,6 +1,8 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
+		"jsx": "react-jsx",
+		"jsxImportSource": "hono/jsx",
 		// Enable latest features
 		"lib": ["ESNext", "DOM"],
 		"moduleDetection": "force",
@@ -21,9 +23,7 @@
 		"noUnusedParameters": false,
 		"noEmit": true,
 		"verbatimModuleSyntax": true,
-		"skipLibCheck": true,
-		"jsx": "react-jsx",
-		"jsxImportSource": "hono/jsx"
+		"skipLibCheck": true
 	},
 	"include": ["lib", "scripts", "app", "./cli.ts"]
 }
