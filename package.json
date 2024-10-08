@@ -25,7 +25,7 @@
 		"lint": "eslint --cache .",
 		"format": "nr lint --fix",
 		"release": "nr lint && nlx publint && nlx bumpp && bun publish",
-		"prepare": "nlx bunpare",
+		"prepare": "bun x bunpare",
 		"cmigemo:fetch": "bun x giget --forceClean gh:koron/cmigemo#master",
 		"postinstall": "bun cmigemo:fetch"
 	},
