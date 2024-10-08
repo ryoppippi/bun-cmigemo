@@ -1,9 +1,9 @@
 {
 	"name": "bun-cmigemo",
 	"type": "module",
-	"module": "index.ts",
+	"module": "cli.ts",
 	"scripts": {
-		"main": "bun run index.ts",
+		"main": "bun run cli.ts",
 		"lint": "eslint --cache .",
 		"format": "nr lint --fix",
 		"prepare": "nlx bunpare && nr cmigemo:fetch && nr cmigemo:build",
