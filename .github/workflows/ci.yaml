@@ -1,0 +1,31 @@
+name: CI
+
+env:
+  BUN_VERSION: latest
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - run: bun i --frozen-lockfile
+      - run: bun run lint
+
+  npm-publish-dry-run-and-upload-pkg-pr-now:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - run: bun i --frozen-lockfile
+      - run: bun x pkg-pr-new publish
