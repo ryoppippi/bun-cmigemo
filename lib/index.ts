@@ -2,10 +2,9 @@ import process from 'node:process';
 import { isAbsolute, resolve } from 'node:path';
 import type { Pointer } from 'bun:ffi';
 import { CString, JSCallback, cc } from 'bun:ffi';
-import { cli } from 'cleye';
 import { stringToUint8Array } from 'uint8array-extras';
 
-const cmigemoRoot = resolve(__dirname, './koron-cmigemo/');
+const cmigemoRoot = resolve(__dirname, '../koron-cmigemo/');
 const cmigemoSrc = resolve(cmigemoRoot, 'src/');
 
 export const {

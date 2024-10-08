@@ -30,6 +30,11 @@ if (import.meta.main) {
 
 	{
 		using migemo = new Migemo(dictPath);
+
+		const start = performance.now();
 		migemo.query(query, s => console.log(s));
+		const end = performance.now();
+
+		console.log(`Time: ${end - start}ms`);
 	}
 }
