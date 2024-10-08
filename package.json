@@ -1,7 +1,7 @@
 {
 	"name": "bun-cmigemo",
 	"type": "module",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Bun bindings for cmigemo",
 	"author": "ryoppippi",
 	"license": "MIT",
@@ -24,7 +24,7 @@
 		"app": " bun run --hot ./app/index.tsx",
 		"lint": "eslint --cache .",
 		"format": "nr lint --fix",
-		"release": "nr lint && nlx publint && nlx bumpp && bun publish",
+		"release": "nr lint && nlx publint && nlx bumpp && npm publish",
 		"prepare": "bun x bunpare",
 		"cmigemo:fetch": "bun x giget --forceClean gh:koron/cmigemo#master",
 		"postinstall": "bun cmigemo:fetch"
