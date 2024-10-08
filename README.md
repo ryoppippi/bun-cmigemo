@@ -3,13 +3,23 @@
 [![npm version](https://img.shields.io/npm/v/bun-cmigemo?color=yellow)](https://npmjs.com/package/bun-cmigemo)
 [![npm downloads](https://img.shields.io/npm/dm/bun-cmigemo?color=yellow)](https://npmjs.com/package/bun-cmigemo)
 
-Run [cmigemo](https://github.com/koron/cmigemo) in Bun.
+Run [`cmigemo`](https://github.com/koron/cmigemo) with [`Bun cc`](https://bun.sh/docs/api/cc).
 
-https://github.com/user-attachments/assets/98da72af-7831-453a-ba97-fed938707d00
+![Image](https://github.com/user-attachments/assets/98da72af-7831-453a-ba97-fed938707d00)
 
-## これは何
+## What is this?
 
-[cmigemo](https://github.com/koron/cmigemo) を [Bun](https://bun.sh/blog/compile-and-run-c-in-js) でコンパイルして動かすサンプルプロジェクトです。
+This package allows you to run [`cmigemo`](https://github.com/koron/cmigemo) with [`Bun cc`](https://bun.sh/docs/api/cc).
+
+Bun has an experimental compiler called [`Bun cc`](https://bun.sh/docs/api/cc), which enables you to run C code in Bun with low overhead. `cmigemo` is written in C, and if you want to use it in Bun, you need to compile it. However, by wrapping C code with `Bun cc`, you can run it in Bun without the need for explicit compilation! Amazing, right?
+
+So, this package is essentially a wrapper around `cmigemo`, but you don't need to compile it!
+
+There are also other implementations of `migemo`, such as [`jsmigemo`](https://github.com/oguna/jsmigemo) and [`rustmigemo`](https://github.com/oguna/rustmigemo), which are written in JavaScript and Rust, respectively, allowing you to run them in Node or even in the browser!
+
+So... WTH does this package exist? Well, it's just for fun! 😄
+
+## Usage
 
 To install dependencies:
 
@@ -18,21 +28,38 @@ bun i bun-cmigemo
 bun pm trust bun-cmigemo
 ```
 
-To run:
+Then, you can use it like this:
 
-```bash
-bun main <query>
+```ts
+import { Migemo } from 'bun-cmigemo';
 
-# example
-bun main nezu
-> C/Migemo: ([鼡子鼠]|ﾈｽﾞ|ネズ|杜松|禰津|根津|ねず|ｎｅｚｕ|nezu)
+const dictPath = '/absolute/path/to/dict';
+{
+	using migemo = new Migemo(dictPath);
+
+	migemo.query(query, s => console.log(s));
+}
 ```
 
-This project was created using `bun init` in bun v1.1.29.
+## CLI
+
+You can also use the CLI:
+
+```bash
+bun x bun-cmigemo -d path/to/dict 'query'
+bun x bun-cmigemo --help
+```
 
 ## Example App
 
+This repo includes an example web app that uses `bun-cmigemo`.
+
+You can run it like this:
+
 ```bash
+git clone https://github.com/ryoppippi/bun-cmigemo
+cd bun-cmigemo
+bun i
 bun app
 open http://localhost:3000
 ```
