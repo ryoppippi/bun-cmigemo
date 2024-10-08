@@ -6,6 +6,7 @@ import { stringToUint8Array } from 'uint8array-extras';
 
 const cmigemoRoot = resolve(__dirname, '../koron-cmigemo/');
 const cmigemoSrc = resolve(cmigemoRoot, 'src/');
+const defaultDict = resolve(__dirname, '../utf-8/migemo-dict');
 
 export const {
 	symbols: {
@@ -52,7 +53,7 @@ export const {
 export class Migemo {
 	#m: Pointer;
 
-	constructor(dictPath: string) {
+	constructor(dictPath: string = defaultDict) {
 		const dict = isAbsolute(dictPath) ? dictPath : resolve(process.cwd(), dictPath);
 		const m = migemoOpen(stringToUint8Array(dict));
 		if (m === null) {
