@@ -25,7 +25,8 @@
 		"lint": "eslint --cache .",
 		"format": "nr lint --fix",
 		"cmigemo:fetch": "nlx giget --forceClean gh:koron/cmigemo#master",
-		"postinstall": "nlx bunpare && nr cmigemo:fetch"
+		"postinstall": "nlx bunpare && nr cmigemo:fetch",
+		"release": "nr lint && nlx publint && nlx bumpp && bun publish"
 	},
 	"peerDependencies": {
 		"typescript": "^5.6.2"
