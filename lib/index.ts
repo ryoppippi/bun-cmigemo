@@ -15,7 +15,7 @@ export const {
 		migemoClose,
 	},
 } = cc({
-	source: './main.c',
+	source: Bun.file(resolve(__dirname, './main.c')),
 	library: ['c', 'migemo'],
 	flags: [`-L${cmigemoRoot}`],
 	include: [cmigemoSrc, cmigemoRoot],
