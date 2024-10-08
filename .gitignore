@@ -174,9 +174,6 @@ dist
 # Finder (MacOS) folder config
 .DS_Store
 
-# dict file
-/dict
-
 # eslint cache
 .eslintcache
 
