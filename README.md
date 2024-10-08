@@ -1,6 +1,6 @@
 # bun-cmigemo
 
-Bun で cmigemo を動かす！
+Run [cmigemo](https://github.com/koron/cmigemo) in Bun.
 
 https://github.com/user-attachments/assets/98da72af-7831-453a-ba97-fed938707d00
 
@@ -11,7 +11,8 @@ https://github.com/user-attachments/assets/98da72af-7831-453a-ba97-fed938707d00
 To install dependencies:
 
 ```bash
-bun install
+bun i bun-cmigemo
+bun pm trust bun-cmigemo
 ```
 
 To run:
@@ -34,6 +35,10 @@ open http://localhost:3000
 ```
 
 https://github.com/user-attachments/assets/8d728cc8-4a15-402c-87e7-950ca083725e
+
+## Limitations
+
+This is obvious but it runs on only Bun.
 
 ## License
 
