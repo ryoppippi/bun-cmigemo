@@ -1,10 +1,9 @@
 #include "migemo.h"
 #include <stdio.h>
 
-int migemoRun(char *dict_path, char *query) {
-  migemo *m;
-  m = migemo_open(dict_path);
+migemo *migemoOpen(char *dict_path) { return migemo_open(dict_path); }
 
+int migemoRun(migemo *m, char *dict_path, char *query) {
   /* 必要な回数だけqueryを行なう */
   {
     unsigned char *p;

@@ -10,7 +10,10 @@ const cmigemoRoot = resolve(__dirname, './koron-cmigemo/');
 const cmigemoSrc = resolve(cmigemoRoot, 'src/');
 
 export const {
-	symbols: { migemoRun },
+	symbols: {
+		migemoRun,
+		migemoOpen,
+	},
 } = cc({
 	source: './main.c',
 	library: ['c', 'migemo'],
@@ -19,7 +22,11 @@ export const {
 	symbols: {
 		migemoRun: {
 			returns: 'int',
-			args: ['buffer', 'buffer'],
+			args: ['ptr', 'cstring', 'cstring'],
+		},
+		migemoOpen: {
+			returns: 'ptr',
+			args: ['cstring'],
 		},
 	},
 });
@@ -47,7 +54,10 @@ if (import.meta.main) {
 
 	const dictPath = isAbsolute(dict) ? dict : resolve(process.cwd(), dict);
 
+	const m = migemoOpen(stringToUint8Array(dictPath));
+
 	migemoRun(
+		m,
 		stringToUint8Array(dictPath),
 		stringToUint8Array(query),
 	);
