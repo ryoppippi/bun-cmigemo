@@ -25,5 +25,5 @@
 		"jsx": "react-jsx",
 		"jsxImportSource": "hono/jsx"
 	},
-	"include": ["lib", "app", "./cli.ts"]
+	"include": ["lib", "scripts", "app", "./cli.ts"]
 }
