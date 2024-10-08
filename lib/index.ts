@@ -1,3 +1,5 @@
+import 'bun-only';
+
 import process from 'node:process';
 import { isAbsolute, resolve } from 'node:path';
 import type { Pointer } from 'bun:ffi';
