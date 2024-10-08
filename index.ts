@@ -2,7 +2,8 @@
 
 import process from 'node:process';
 import { isAbsolute, resolve } from 'node:path';
-import { cc } from 'bun:ffi';
+import type { Pointer } from 'bun:ffi';
+import { CString, JSCallback, cc } from 'bun:ffi';
 import { cli } from 'cleye';
 import { stringToUint8Array } from 'uint8array-extras';
 
@@ -13,6 +14,8 @@ export const {
 	symbols: {
 		migemoRun,
 		migemoOpen,
+		migemoQuery,
+		migemoClose,
 	},
 } = cc({
 	source: './main.c',
@@ -27,6 +30,14 @@ export const {
 		migemoOpen: {
 			returns: 'ptr',
 			args: ['cstring'],
+		},
+		migemoQuery: {
+			returns: 'int',
+			args: ['ptr', 'cstring', 'callback'],
+		},
+		migemoClose: {
+			returns: 'int',
+			args: ['ptr'],
 		},
 	},
 });
@@ -56,9 +67,22 @@ if (import.meta.main) {
 
 	const m = migemoOpen(stringToUint8Array(dictPath));
 
-	migemoRun(
-		m,
-		stringToUint8Array(dictPath),
-		stringToUint8Array(query),
+	const printIterator = new JSCallback(
+		(ptr: Pointer) => {
+			const s = new CString(ptr);
+		},
+		{
+			returns: 'void',
+			args: ['ptr'],
+		},
 	);
+
+	migemoQuery(
+		m,
+		stringToUint8Array(query),
+		printIterator.ptr,
+	);
+
+	printIterator.close();
+	migemoClose(m);
 }
