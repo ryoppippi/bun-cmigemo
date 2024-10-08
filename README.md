@@ -2,6 +2,12 @@
 
 Bun で cmigemo を動かす！
 
+
+
+https://github.com/user-attachments/assets/98da72af-7831-453a-ba97-fed938707d00
+
+
+
 ## これは何
 
 [cmigemo](https://github.com/koron/cmigemo) を [Bun](https://bun.sh/blog/compile-and-run-c-in-js) でコンパイルして動かすサンプルプロジェクトです。
