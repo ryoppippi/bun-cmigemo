@@ -1,7 +1,7 @@
 {
 	"name": "bun-cmigemo",
 	"type": "module",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Bun bindings for cmigemo",
 	"author": "ryoppippi",
 	"license": "MIT",
