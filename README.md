@@ -5,7 +5,7 @@
 
 Run [`cmigemo`](https://github.com/koron/cmigemo) with [`Bun cc`](https://bun.sh/docs/api/cc).
 
-![Image](https://github.com/user-attachments/assets/98da72af-7831-453a-ba97-fed938707d00)
+https://github.com/user-attachments/assets/98da72af-7831-453a-ba97-fed938707d00
 
 ## What is this?
 
