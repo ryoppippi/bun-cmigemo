@@ -1,5 +1,8 @@
 # bun-cmigemo
 
+[![npm version](https://img.shields.io/npm/v/bun-cmigemo?color=yellow)](https://npmjs.com/package/bun-cmigemo)
+[![npm downloads](https://img.shields.io/npm/dm/bun-cmigemo?color=yellow)](https://npmjs.com/package/bun-cmigemo)
+
 Run [cmigemo](https://github.com/koron/cmigemo) in Bun.
 
 https://github.com/user-attachments/assets/98da72af-7831-453a-ba97-fed938707d00
