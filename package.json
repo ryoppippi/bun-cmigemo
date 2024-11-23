@@ -43,6 +43,6 @@
 		"@types/bun": "latest",
 		"eslint": "^9.14.0",
 		"eslint-plugin-format": "^0.1.2",
-		"hono": "^4.6.10"
+		"hono": "^4.6.11"
 	}
 }
