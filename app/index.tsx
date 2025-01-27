@@ -48,7 +48,6 @@ app.get('/', async (c) => {
 
 app.post('/api', async (c) => {
 	const { query }: { query: string } = await c.req.json();
-	using migemo = new Migemo();
 	let result: string = '';
 	const start = performance.now();
 	migemo.query(query, (s) => {
