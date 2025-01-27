@@ -21,7 +21,7 @@
 	],
 	"scripts": {
 		"cli": "bun run cli.ts",
-		"app": " bun run --hot ./app/index.tsx",
+		"app": " bun run --hot ./app/index.ts",
 		"lint": "eslint --cache .",
 		"format": "nr lint --fix",
 		"release": "nr lint && nlx publint && nlx bumpp && bun publish",
