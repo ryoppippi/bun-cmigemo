@@ -39,7 +39,7 @@
 	"devDependencies": {
 		"@antfu/ni": "^24.1.0",
 		"@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",
-		"@types/bun": "^1.2.4",
+		"@types/bun": "^1.2.5",
 		"eslint": "^9.14.0",
 		"eslint-plugin-format": "^1.0.1",
 		"hono": "^4.7.4"
