@@ -37,7 +37,7 @@
 		"uint8array-extras": "^1.4.0"
 	},
 	"devDependencies": {
-		"@antfu/ni": "^24.1.0",
+		"@antfu/ni": "^24.2.0",
 		"@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",
 		"@types/bun": "^1.2.5",
 		"eslint": "^9.14.0",
