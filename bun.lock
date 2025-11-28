@@ -6,7 +6,7 @@
       "name": "bun-cmigemo",
       "dependencies": {
         "bun-only": "^0.0.1",
-        "cleye": "^2.0.0",
+        "cleye": "^2.0.1",
         "uint8array-extras": "^1.4.0",
       },
       "devDependencies": {
@@ -187,7 +187,7 @@
 
     "clean-regexp": ["clean-regexp@1.0.0", "", { "dependencies": { "escape-string-regexp": "^1.0.5" } }, "sha512-GfisEZEJvzKrmGWkvfhgzcz/BllN1USeqD2V6tg14OAOgaCD2Z/PUEuxnAZ/nPvmaHRG7a8y77p1T/IRQ4D1Hw=="],
 
-    "cleye": ["cleye@2.0.0", "", { "dependencies": { "terminal-columns": "^2.0.0", "type-flag": "^4.0.1" } }, "sha512-O4pienLd7x3kzjdhzz0nIEmPuX84I1C1UjLPdMe+0TebP2aTuPoXx15zvLMgSUIn+ZAJJzH9cH4aEVA1bDdmsA=="],
+    "cleye": ["cleye@2.0.1", "", { "dependencies": { "terminal-columns": "^2.0.0", "type-flag": "^4.0.1" } }, "sha512-c7dha4cG1fF3TZOkzhRyhEvFxHbdVL5AuQ2+xEBB7dR0Y/mhgmuzIdG60+wRUIPyRCPhF17CDbwP+LZ/83PnOg=="],
 
     "cliui": ["cliui@8.0.1", "", { "dependencies": { "string-width": "^4.2.0", "strip-ansi": "^6.0.1", "wrap-ansi": "^7.0.0" } }, "sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ=="],
 
