@@ -29,7 +29,7 @@
 		"postinstall": "bun cmigemo:fetch"
 	},
 	"peerDependencies": {
-		"typescript": "^6.0.2"
+		"typescript": "^6.0.3"
 	},
 	"dependencies": {
 		"bun-only": "^0.0.1",
